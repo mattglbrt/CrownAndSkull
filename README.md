@@ -42,20 +42,18 @@ http://localhost:3000
 
 All game mechanics (flaws, gear, lineages, etc.) are stored in flat JSON files inside public/data/ to keep logic clean and editable.
 
-Export
+# Export
 Once complete, a character can be downloaded as a .md file using the "Download Markdown" button on the final step. The file is named after the character.
 
-TODO / Ideas
-Add export to PDF
+# TODO / Ideas
+- [X] Local save/load with localStorage
+- [ ] Add export to PDF
+- [ ] Add printable view
+- [ ] Campaign tracker or deed builder
+- [X] Shareable character links
+- [ ] Character Templates: Provide pre-made templates for quick character generation.
+- [ ] Enhancing Mobile Responsiveness: Optimize the interface for mobile devices.
 
-Add printable view
-
-Local save/load with localStorage
-
-Campaign tracker or deed builder
-
-Shareable character links
-
-License
+# License
 This app is for personal and fan use only. Crown & Skull is copyrighted by its original creators. This project is an unofficial utility and not affiliated with the original publisher. This uses only the free options available by downloading to free players guide at (Runehammer)[https://www.runehammer.online/crown-skull-rpg]
 

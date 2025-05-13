@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 
 export default function StepSkills({ skills, setSkills, heroPoints, setHeroPoints, onFinish }) {
   const [availableSkills, setAvailableSkills] = useState([]);
+  const [skillBuffer, setSkillBuffer] = useState({});
 
   useEffect(() => {
     fetch('/data/skills.json')
@@ -16,7 +17,6 @@ export default function StepSkills({ skills, setSkills, heroPoints, setHeroPoint
 
     if (delta > heroPoints) return;
     if (newValue < 3) {
-      // Remove skill
       if (current) {
         setSkills(skills.filter(s => s.name !== skillName));
         setHeroPoints(heroPoints + oldValue);
@@ -48,7 +48,7 @@ export default function StepSkills({ skills, setSkills, heroPoints, setHeroPoint
 
       <div className="space-y-4">
         {availableSkills.map(skill => {
-          const value = getValue(skill.name);
+          const value = skillBuffer[skill.name] ?? getValue(skill.name);
           return (
             <div key={skill.name} className="border rounded-md p-3 bg-white shadow-sm">
               <div className="flex justify-between items-center">
@@ -63,11 +63,17 @@ export default function StepSkills({ skills, setSkills, heroPoints, setHeroPoint
                     max={18}
                     step={1}
                     value={value}
-                    onChange={(e) => updateSkill(skill.name, parseInt(e.target.value) || 0)}
+                    onChange={(e) =>
+                      setSkillBuffer({ ...skillBuffer, [skill.name]: parseInt(e.target.value || '0') })
+                    }
+                    onBlur={() => updateSkill(skill.name, skillBuffer[skill.name] || 0)}
                     className="w-16 px-2 py-1 border rounded text-center"
                   />
                   <button
-                    onClick={() => updateSkill(skill.name, 0)}
+                    onClick={() => {
+                      setSkillBuffer({ ...skillBuffer, [skill.name]: 0 });
+                      updateSkill(skill.name, 0);
+                    }}
                     className="text-xs text-red-500 underline"
                   >
                     Clear

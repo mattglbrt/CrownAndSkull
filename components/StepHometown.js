@@ -1,19 +1,28 @@
+import { useEffect, useState } from 'react';
+
 export default function StepHometown({ hometown, setHometown, onFinish }) {
-  const options = ["Gardenburrow", "Rivergate", "Slimshire", "Eastridge", "Stonehaven"];
+  const [hometowns, setHometowns] = useState([]);
+
+  useEffect(() => {
+    fetch('/data/hometowns.json')
+      .then(res => res.json())
+      .then(data => setHometowns(data));
+  }, []);
 
   return (
     <div>
       <h2 className="text-2xl font-semibold mb-4">Choose Your Hometown</h2>
-      <div className="space-y-3">
-        {options.map(option => (
+      <div className="grid gap-3">
+        {hometowns.map(option => (
           <button
-            key={option}
-            onClick={() => setHometown(option)}
-            className={`block w-full text-left border px-4 py-2 rounded-md transition ${
-              hometown === option ? 'bg-blue-200 border-blue-400' : 'bg-white hover:bg-gray-100'
+            key={option.name}
+            onClick={() => setHometown(option.name)}
+            className={`text-left border px-4 py-2 rounded-md transition ${
+              hometown === option.name ? 'bg-blue-200 border-blue-400' : 'bg-white hover:bg-gray-100'
             }`}
           >
-            <strong>{option}</strong>
+            <strong>{option.name}</strong>
+            <p className="text-sm text-gray-600">{option.description}</p>
           </button>
         ))}
       </div>
