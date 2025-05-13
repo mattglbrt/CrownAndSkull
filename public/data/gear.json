@@ -1,0 +1,11 @@
+[
+  { "name": "Backpack", "note": "Carry 2 extra items", "cost": 6 },
+  { "name": "Torches", "note": "3x snap-light, 1 scene", "cost": 1 },
+  { "name": "Climbing Gear", "note": "Ignore climb penalties", "cost": 1 },
+  { "name": "Lockpicks", "note": "Required for Lockpicking", "cost": 1 },
+  { "name": "Bandage Kit", "note": "3x heals 1 skill", "cost": 3 },
+  { "name": "Oil Flask", "note": "3x flammable glass vial", "cost": 1 },
+  { "name": "Rope", "note": "50ft, breaks on crit fail", "cost": 1 },
+  { "name": "Bear Trap", "note": "Muscle to escape", "cost": 2 },
+  { "name": "Powder Kit", "note": "Firearms never empty (if dry)", "cost": 3 }
+]

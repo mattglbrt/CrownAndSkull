@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Battlemaster",
+    "description": "When you roll maximum damage, roll again. No limit to explosions.",
+    "cost": 15
+  },
+  {
+    "name": "Brutal Fighter",
+    "description": "Your melee attacks can hit 2 foes with one damage roll.",
+    "cost": 15
+  },
+  {
+    "name": "Druid",
+    "description": "Gain Tracking and Hunting (9). Outdoors: +3 to all skills.",
+    "cost": 15
+  },
+  {
+    "name": "Empath",
+    "description": "Gain Investigation, Streetwise, and Oratory (7).",
+    "cost": 15
+  },
+  {
+    "name": "Go Unnoticed",
+    "description": "Enemies always target you last in combat.",
+    "cost": 15
+  },
+  {
+    "name": "Mountaineer",
+    "description": "Gain Climber and Breakfall (10). In mountains: Scout 15.",
+    "cost": 15
+  },
+  {
+    "name": "Paragon of Faith",
+    "description": "Faith skill grows by 2 on success (max 16); destroy 1D6 weak undead as Exhausting spell.",
+    "cost": 15
+  },
+  {
+    "name": "Protector",
+    "description": "While using a shield, once per round you can make an ally’s failed Defense roll succeed.",
+    "cost": 15
+  },
+  {
+    "name": "Spellsinger",
+    "description": "Spells must be spoken, but work on targets that can hear you.",
+    "cost": 15
+  },
+  {
+    "name": "Uncanny Shot",
+    "description": "Add an extra damage die with all ranged attacks. Ignore 1 DEF.",
+    "cost": 15
+  },
+  {
+    "name": "Veteran Commander",
+    "description": "One ally does max damage and is immune to harm in the first round of combat.",
+    "cost": 15
+  },
+  {
+    "name": "Wizard Savant",
+    "description": "On a Magic skill roll of 6 or less, maximize all effects of your spell.",
+    "cost": 15
+  }
+]

@@ -1,0 +1,11 @@
+[
+  { "name": "Dagger", "damage": "D4", "note": "Conceal, thrown", "cost": 1 },
+  { "name": "Short Sword", "damage": "D6", "note": "Usable in tight spaces", "cost": 1 },
+  { "name": "Long Sword", "damage": "D8", "note": "Explodes on max damage", "cost": 2 },
+  { "name": "Great Sword", "damage": "D10", "note": "Two-handed", "cost": 3 },
+  { "name": "Battle Axe", "damage": "D12", "note": "Ignore 2 DEF", "cost": 5 },
+  { "name": "Short Bow", "damage": "D6", "note": "Usable point blank", "cost": 1 },
+  { "name": "Long Bow", "damage": "D8", "note": "Fire again on max damage", "cost": 3 },
+  { "name": "Crossbow", "damage": "D10", "note": "1 round reload", "cost": 5 },
+  { "name": "Musket", "damage": "D12", "note": "Loud, 6 phase reload", "cost": 7 }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Human",
+    "description": "Human folk are a fractured people with lost royalty and dreams of unity. Though once mighty, their kings and golden ages fell to calamity. Some seek to reclaim the vision of the past and find a true heir to unite The Holds."
+  },
+  {
+    "name": "Elven Folk",
+    "description": "Elves are magical and scholarly, curating the greatest libraries. They strive to avoid war, aligning with nature and dragons, but their unity is a façade—deep disagreements divide their noble houses and aims."
+  },
+  {
+    "name": "Stout Folk",
+    "description": "Also called dwarves, they hail from Runnminir and Ullur and are known for honor, tradition, and mighty deeds. While they cherish all that is good, they must ever battle the shadow of dwarven greed."
+  },
+  {
+    "name": "Proudfoots",
+    "description": "Feast-loving and inventive, these desert-born folk are frontier riders and master gunners. Though peaceful, their introduction of gunpowder has changed The Holds forever."
+  },
+  {
+    "name": "Frog-kin",
+    "description": "Frog-folk are elite soldiers under a tyrant emperor. Those who defect are hunted and mistrusted but possess unshakable discipline and deadly resolve. Their lineage is one of burden and honor."
+  }
+]

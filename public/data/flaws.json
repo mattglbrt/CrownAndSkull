@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Addict",
+    "description": "You have a specific vice you cannot deny. If you can\u2019t get your fix, you risk attrition."
+  },
+  {
+    "name": "Ascetic",
+    "description": "You frown on possessions. Never exceed 5 equipment."
+  },
+  {
+    "name": "Ancient",
+    "description": "You are old! Physical skills max at 9, but you gain respect."
+  },
+  {
+    "name": "Bad Reputation",
+    "description": "You've done terrible things and people know."
+  },
+  {
+    "name": "Crazy",
+    "description": "You choose randomly when faced with hard choices."
+  },
+  {
+    "name": "Disorganized",
+    "description": "Roll 9 or less to find gear except your most-used items."
+  },
+  {
+    "name": "Drunkard",
+    "description": "Beer drains your coin and irritates friends."
+  },
+  {
+    "name": "Employed",
+    "description": "You are oathsworn. Disobey orders at your peril."
+  },
+  {
+    "name": "Greedy",
+    "description": "Roll 6 or less to resist grabbing treasure."
+  },
+  {
+    "name": "Grudge",
+    "description": "You act irrationally when encountering a target of your bias."
+  },
+  {
+    "name": "Impetuous",
+    "description": "You can only act in phase 1 or 2."
+  },
+  {
+    "name": "Injured",
+    "description": "You lose -1 max skill slot."
+  },
+  {
+    "name": "Just a Kid",
+    "description": "You may never have more than 6 skills."
+  },
+  {
+    "name": "Paranoid",
+    "description": "You sow distrust and NPCs rarely trust you."
+  },
+  {
+    "name": "Phobia",
+    "description": "When facing the source of your fear, no rolls succeed."
+  },
+  {
+    "name": "Pursued",
+    "description": "You are hunted by an enemy or nemesis."
+  },
+  {
+    "name": "Sickly",
+    "description": "Resist and Survival max at 9."
+  },
+  {
+    "name": "Stubborn",
+    "description": "Once your mind is made, only a D20 contest changes it."
+  },
+  {
+    "name": "Timid",
+    "description": "You may only act in phase 4 or 5."
+  },
+  {
+    "name": "Unlucky",
+    "description": "Critically fail on a 16+."
+  }
+]

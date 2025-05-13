@@ -1,0 +1,22 @@
+[
+  { "name": "Arcane Lock", "cost": 3, "effect": "A glyph used to permanently seal a door." },
+  { "name": "Armor", "cost": 3, "effect": "Add +3 Defense." },
+  { "name": "Courage", "cost": 3, "effect": "Ignore fear or intimidation." },
+  { "name": "Dream Spike", "cost": 3, "effect": "Stun an intelligent foe." },
+  { "name": "Far-Seer", "cost": 3, "effect": "See your position from high above." },
+  { "name": "Fireblast", "cost": 3, "effect": "Explosive fire from the caster’s hands." },
+  { "name": "Ghost Blade", "cost": 3, "effect": "Hit 1D2 targets with arcane knives." },
+  { "name": "Healing Light", "cost": 3, "effect": "Heal a skill attrition with a touch." },
+  { "name": "Invisible Wall", "cost": 3, "effect": "20’ wide force field, 4 attrition / 10 Def." },
+  { "name": "Levitation", "cost": 3, "effect": "Hover up to 6 feet above ground." },
+  { "name": "Mage’s Cloak", "cost": 3, "effect": "Enchant a cape. Wearer is targeted last." },
+  { "name": "Piercing Blade", "cost": 3, "effect": "Enchant a weapon. It is deadly." },
+  { "name": "Purify", "cost": 3, "effect": "Free a target of all afflictions." },
+  { "name": "Sprint", "cost": 3, "effect": "Grant double move speed." },
+  { "name": "Stormcaller", "cost": 3, "effect": "Conjure a type of weather when outdoors." },
+  { "name": "Summon Vermin", "cost": 3, "effect": "Attract a swarm of local pests." },
+  { "name": "Telekineticus", "cost": 3, "effect": "Move small objects in your immediate area." },
+  { "name": "Vanish", "cost": 5, "effect": "Become invisible." },
+  { "name": "Vines", "cost": 3, "effect": "Call up vines that grab passers-through." },
+  { "name": "Waterbreath", "cost": 3, "effect": "Breathe underwater with ease." }
+]

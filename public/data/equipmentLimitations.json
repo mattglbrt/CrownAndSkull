@@ -1,0 +1,8 @@
+[
+  { "name": "Breakable", "description": "Breaks on crit fail or low roll", "refund": 3 },
+  { "name": "Sought After", "description": "Enemies may try to steal this", "refund": 3 },
+  { "name": "Stolen", "description": "The rightful owner is looking for it", "refund": 3 },
+  { "name": "Wonky", "description": "Occasionally malfunctions", "refund": 3 },
+  { "name": "Heavy", "description": "Takes 2 item slots", "refund": 3 },
+  { "name": "Garish", "description": "Embarrassing or attention-grabbing", "refund": 3 }
+]

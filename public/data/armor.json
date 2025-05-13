@@ -1,0 +1,10 @@
+[
+  { "name": "Cloak", "defense": 1, "note": "+3 Stealth", "cost": 1 },
+  { "name": "Greaves", "defense": 1, "note": "Shin armor", "cost": 1 },
+  { "name": "Leather Vest", "defense": 2, "note": "No blunt protection", "cost": 2 },
+  { "name": "Chain Mail", "defense": 3, "note": "Noisy", "cost": 3 },
+  { "name": "Chest Plate", "defense": 4, "note": "-3 Stealth, cannot swim", "cost": 5 },
+  { "name": "Wood Shield", "defense": 1, "note": "Absorbs 2 hits", "cost": 3 },
+  { "name": "Steel Shield", "defense": 2, "note": "Absorbs 3 hits", "cost": 5 },
+  { "name": "Tower Shield", "defense": 3, "note": "Clumsy, ignore arrows", "cost": 5 }
+]

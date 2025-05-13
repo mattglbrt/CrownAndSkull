@@ -1,0 +1,12 @@
+[
+  { "name": "Campfire Magic", "description": "Can only be cast in a safe place." },
+  { "name": "Exhausting", "description": "You cannot use magic for 1 round after casting." },
+  { "name": "Costs 1 Attrition", "description": "You lose 1 skill each time this spell is cast." },
+  { "name": "Druidic", "description": "Fails if wearing or touching metal." },
+  { "name": "Madness", "description": "On failure, gain the Crazy flaw until you rest." },
+  { "name": "Painful", "description": "After casting, you can only move your next turn." },
+  { "name": "Ritual", "description": "Requires 1D4 rounds of uninterrupted casting." },
+  { "name": "Takes 2 Phases", "description": "Spell triggers only after 2 full phases." },
+  { "name": "Unstable", "description": "On failure, roll Unstable Magic table." },
+  { "name": "Infernal", "description": "On failure, roll Infernal Magic table." }
+]

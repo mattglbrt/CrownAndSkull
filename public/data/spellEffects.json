@@ -1,0 +1,14 @@
+[
+  { "name": "Accuracy", "description": "Boost an upcoming damage roll." },
+  { "name": "Animate", "description": "Use objects as puppets, D6 of them per cast." },
+  { "name": "Area", "description": "Affects all targets in arm’s-width radius." },
+  { "name": "Blast", "description": "Inflict elemental or magical damage." },
+  { "name": "Duration", "description": "Upgrade from 1D6 phases to 1 full round." },
+  { "name": "Dominate", "description": "Control a target if effect > target roll." },
+  { "name": "Dice Upgrade", "description": "Upgrade a damage or effect die by one grade." },
+  { "name": "Powerful", "description": "Add an additional die or bonus to a spell’s roll." },
+  { "name": "Summon", "description": "Call forth D6 1-attrition minion creatures." },
+  { "name": "Shield", "description": "Create a barrier that absorbs damage." },
+  { "name": "Transport", "description": "Teleport target up to effect x 10 ft." },
+  { "name": "Restore", "description": "Heal 1 skill attrition." }
+]

@@ -1,0 +1,5 @@
+[
+  { "name": "Touch", "cost": 0 },
+  { "name": "Ranged", "cost": 3 },
+  { "name": "Area", "cost": 3 }
+]

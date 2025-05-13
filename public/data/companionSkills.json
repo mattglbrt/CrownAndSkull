@@ -1,0 +1,15 @@
+[
+  { "name": "Retrieve", "description": "Recover an object of equal or smaller mass." },
+  { "name": "Track", "description": "Follow a designated quarry for 1 round." },
+  { "name": "Attack", "description": "Deal damage with natural weapons." },
+  { "name": "Stand Watch", "description": "Keeps guard and alerts to any event." },
+  { "name": "Protect", "description": "Takes damage for its charge when possible." },
+  { "name": "Find", "description": "Locate a person or object in 1D4 rounds." },
+  { "name": "Report", "description": "Scout an area and report back in 1D4 rounds." },
+  { "name": "Carry", "description": "Carry its own weight in gear or goods." },
+  { "name": "Hunt", "description": "Feed a group with a successful forage once per day." },
+  { "name": "Pin Down", "description": "Pounce on a foe and hold it in place." },
+  { "name": "Endure", "description": "Gain +1 protective attrition vs. a lethal hit." },
+  { "name": "Frighten", "description": "Scare a foe into hesitation for 1 round." },
+  { "name": "Taunt", "description": "Force a foe to attack for 1 round." }
+]

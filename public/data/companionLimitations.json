@@ -1,0 +1,7 @@
+[
+  { "name": "Frightened", "description": "May flee on roll of 4 or less or under stress.", "refund": 3 },
+  { "name": "Trophy", "description": "Hunted by collectors or enemies.", "refund": 3 },
+  { "name": "Feral", "description": "Won’t stop attacking until foes are down.", "refund": 3 },
+  { "name": "Impulsive", "description": "On failed roll, acts independently during battle.", "refund": 3 },
+  { "name": "Clumsy", "description": "Afflicts the group’s stealth attempts with -3 penalty.", "refund": 3 }
+]

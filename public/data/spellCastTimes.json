@@ -1,0 +1,6 @@
+[
+  { "name": "Instant", "cost": 0 },
+  { "name": "1 Phase", "cost": 0 },
+  { "name": "2 Phases", "cost": 3 },
+  { "name": "Ritual (1D4 rounds)", "cost": 3 }
+]

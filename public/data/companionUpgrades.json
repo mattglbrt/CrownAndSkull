@@ -1,0 +1,6 @@
+[
+  { "name": "Deadly", "description": "Upgrade the companion’s damage with an additional die.", "cost": 3 },
+  { "name": "Cunning", "description": "Upgrade the skill value used by +1.", "cost": 3 },
+  { "name": "Precise", "description": "Ignores most penalties in combat.", "cost": 3 },
+  { "name": "Evasive", "description": "Gains +3 Defense.", "cost": 3 }
+]

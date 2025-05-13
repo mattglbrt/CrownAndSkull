@@ -1,0 +1,11 @@
+[
+  { "name": "Deadly", "description": "Add an extra damage die of the same type", "cost": 3 },
+  { "name": "Balanced", "description": "Ignore 1 DEF when attacking", "cost": 3 },
+  { "name": "Lucky", "description": "Ignore critical fails when using this item", "cost": 3 },
+  { "name": "Chained", "description": "Cannot be lost or stolen", "cost": 3 },
+  { "name": "Lightweight", "description": "Does not hinder Stealth or Swimming", "cost": 3 },
+  { "name": "Bleed", "description": "Inflicts damage again for D4 rounds", "cost": 3 },
+  { "name": "Reinforced", "description": "Takes 2 hits to break", "cost": 3 },
+  { "name": "Cold Forged", "description": "Immune to corrosion", "cost": 3 },
+  { "name": "Die Upgrade", "description": "Upgrade damage die to next highest type", "cost": 3 }
+]
