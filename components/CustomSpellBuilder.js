@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 
 export default function CustomSpellBuilder({ customSpells, setCustomSpells, heroPoints, setHeroPoints, onFinish }) {
   const [name, setName] = useState('');
-  const [effect, setEffect] = useState(null);
+  const [spellSummary, setSpellSummary] = useState('');
+  const [effects, setEffects] = useState([]);
   const [castTime, setCastTime] = useState(null);
   const [range, setRange] = useState(null);
   const [duration, setDuration] = useState(null);
@@ -22,7 +23,7 @@ export default function CustomSpellBuilder({ customSpells, setCustomSpells, hero
       fetch('/data/spellCastTimes.json').then(r => r.json()),
       fetch('/data/spellRanges.json').then(r => r.json()),
       fetch('/data/spellDurations.json').then(r => r.json()),
-      fetch('/data/spellModifiers.json').then(r => r.json()).catch(() => []), // fallback
+      fetch('/data/spellModifiers.json').then(r => r.json()).catch(() => []),
       fetch('/data/spellLimitations.json').then(r => r.json())
     ]).then(([e, c, r, d, m, l]) => {
       setEffectList(e);
@@ -34,6 +35,14 @@ export default function CustomSpellBuilder({ customSpells, setCustomSpells, hero
     });
   }, []);
 
+  const toggleEffect = (opt) => {
+    if (effects.includes(opt)) {
+      setEffects(effects.filter(e => e !== opt));
+    } else {
+      setEffects([...effects, opt]);
+    }
+  };
+
   const toggleModifier = (item, list, setList) => {
     if (list.includes(item)) {
       setList(list.filter(i => i !== item));
@@ -44,7 +53,7 @@ export default function CustomSpellBuilder({ customSpells, setCustomSpells, hero
 
   const totalCost = () => {
     const base =
-      (effect?.cost || 3) +
+      effects.reduce((sum, e) => sum + (e.cost || 3), 0) +
       (castTime?.cost || 0) +
       (range?.cost || 0) +
       (duration?.cost || 0) +
@@ -54,14 +63,16 @@ export default function CustomSpellBuilder({ customSpells, setCustomSpells, hero
     return Math.max(1, base);
   };
 
-  const canCreate = () => name && effect && castTime && range && duration && totalCost() <= heroPoints;
+  const canCreate = () =>
+    name && effects.length && castTime && range && duration && totalCost() <= heroPoints;
 
   const handleCreate = () => {
     if (!canCreate()) return;
 
     const newSpell = {
       name,
-      effect: effect.name,
+      summary: spellSummary,
+      effects: effects.map(e => e.name),
       castTime: castTime.name,
       range: range.name,
       duration: duration.name,
@@ -77,7 +88,8 @@ export default function CustomSpellBuilder({ customSpells, setCustomSpells, hero
 
   const resetBuilder = () => {
     setName('');
-    setEffect(null);
+    setSpellSummary('');
+    setEffects([]);
     setCastTime(null);
     setRange(null);
     setDuration(null);
@@ -101,7 +113,17 @@ export default function CustomSpellBuilder({ customSpells, setCustomSpells, hero
           />
         </label>
 
-        <Selector label="Effect" options={effectList} selected={effect} setSelected={setEffect} />
+        <label className="block">
+          <span className="text-sm">Spell Description</span>
+          <textarea
+            value={spellSummary}
+            onChange={e => setSpellSummary(e.target.value)}
+            className="w-full border p-2 rounded"
+            placeholder="Write what this spell does in your own words"
+          />
+        </label>
+
+        <MultiToggle label="Effects" options={effectList} selectedList={effects} toggle={toggleEffect} />
         <Selector label="Cast Time" options={castTimes} selected={castTime} setSelected={setCastTime} />
         <Selector label="Range" options={ranges} selected={range} setSelected={setRange} />
         <Selector label="Duration" options={durations} selected={duration} setSelected={setDuration} />
@@ -110,7 +132,9 @@ export default function CustomSpellBuilder({ customSpells, setCustomSpells, hero
         <MultiToggle label="Limitations" options={limits} selectedList={limitations} toggle={i => toggleModifier(i, limitations, setLimitations)} />
       </div>
 
-      <p className="mt-4 text-sm text-gray-700">Total Spell Cost: {totalCost()}</p>
+      <p className="mt-4 text-sm text-gray-700">
+        Total Spell Cost: {totalCost()} (Includes 3 pts base per effect)
+      </p>
 
       <div className="mt-4 flex space-x-4">
         <button
@@ -134,7 +158,10 @@ export default function CustomSpellBuilder({ customSpells, setCustomSpells, hero
           <ul className="list-disc ml-6 space-y-1">
             {customSpells.map((s, i) => (
               <li key={i}>
-                <strong>{s.name}</strong> — {s.effect}, {s.castTime}, {s.range}, {s.duration} ({s.cost} pts)
+                <strong>{s.name}</strong> — {s.effects?.join(', ')}, {s.castTime}, {s.range}, {s.duration} ({s.cost} pts)
+                {s.summary && (
+                  <p className="text-sm text-gray-600 mt-1">{s.summary}</p>
+                )}
               </li>
             ))}
           </ul>
@@ -153,8 +180,11 @@ function Selector({ label, options, selected, setSelected }) {
           <button
             key={opt.name}
             onClick={() => setSelected(opt)}
+            title={opt.description || ''}
             className={`px-3 py-1 rounded border ${
-              selected?.name === opt.name ? 'bg-purple-200 border-purple-400' : 'bg-white hover:bg-gray-100'
+              selected?.name === opt.name
+                ? 'bg-purple-200 border-purple-400'
+                : 'bg-white hover:bg-gray-100'
             }`}
           >
             {opt.name}
@@ -171,14 +201,19 @@ function MultiToggle({ label, options, selectedList, toggle }) {
       <span className="block text-sm font-semibold mb-1">{label}</span>
       <div className="grid grid-cols-2 gap-2">
         {options.map(opt => (
-          <label key={opt.name} className="flex items-center space-x-2">
+          <div key={opt.name} className="relative group flex items-center space-x-2">
             <input
               type="checkbox"
               checked={selectedList.includes(opt)}
               onChange={() => toggle(opt)}
             />
             <span>{opt.name}</span>
-          </label>
+            {opt.description && (
+              <div className="absolute bottom-full mb-1 left-0 hidden group-hover:block w-64 bg-black text-white text-xs p-2 rounded shadow-lg z-10">
+                {opt.description}
+              </div>
+            )}
+          </div>
         ))}
       </div>
     </div>
