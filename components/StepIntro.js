@@ -25,7 +25,7 @@ export default function StepIntro({ name, setName, lineage, setLineage, heroPoin
       </label>
 
       <label className="block mb-4">
-        <span className="text-sm font-medium">Starting Hero Points</span>
+        <span className="text-sm font-medium">Current Hero Points</span>
         <input
           type="number"
           min={10}
