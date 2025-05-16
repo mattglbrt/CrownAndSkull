@@ -5,16 +5,47 @@ export default function CustomItemBuilder({ customItems, setCustomItems, heroPoi
   const [baseItem, setBaseItem] = useState(null);
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
-  const [extraCost, setExtraCost] = useState(0);
+  const [effects, setEffects] = useState([]);
+  const [limitations, setLimitations] = useState([]);
+  const [selectedEffects, setSelectedEffects] = useState([]);
+  const [selectedLimitations, setSelectedLimitations] = useState([]);
 
   useEffect(() => {
-    fetch('/data/equipment.json')
-      .then(res => res.json())
-      .then(data => setItems(data));
+    Promise.all([
+      fetch('/data/weapons.json').then(res => res.json()),
+      fetch('/data/armor.json').then(res => res.json()),
+      fetch('/data/equipmentEffects.json').then(res => res.json()),
+      fetch('/data/equipmentLimitations.json').then(res => res.json())
+    ])
+      .then(([weapons, armor, fx, lim]) => {
+        setItems([...weapons, ...armor]);
+        setEffects(fx);
+        setLimitations(lim);
+      })
+      .catch(err => console.error("Failed to load equipment data:", err));
   }, []);
 
-  const totalCost = () => (baseItem?.cost || 0) + Number(extraCost || 0);
-  const getStat = () => baseItem?.damage ? `${baseItem.damage} damage` : baseItem?.defense ? `${baseItem.defense} DEF` : '';
+  const toggleOption = (item, list, setList) => {
+    if (list.includes(item)) {
+      setList(list.filter(i => i !== item));
+    } else {
+      setList([...list, item]);
+    }
+  };
+
+  const totalCost = () => {
+    const base = baseItem?.cost || 0;
+    const fx = selectedEffects.reduce((sum, e) => sum + (e.cost || 3), 0);
+    const lim = selectedLimitations.reduce((sum, l) => sum + (l.refund || 3), 0);
+    return Math.max(0, base + fx - lim);
+  };
+
+  const getStat = () =>
+    baseItem?.damage
+      ? `${baseItem.damage} damage`
+      : baseItem?.defense
+      ? `${baseItem.defense} DEF`
+      : '';
 
   const handleAdd = () => {
     const cost = totalCost();
@@ -26,7 +57,9 @@ export default function CustomItemBuilder({ customItems, setCustomItems, heroPoi
       base: baseItem.name,
       stat: getStat(),
       cost,
-      description
+      description,
+      effects: selectedEffects.map(e => e.name),
+      limitations: selectedLimitations.map(l => l.name)
     };
 
     setCustomItems([...customItems, item]);
@@ -37,8 +70,9 @@ export default function CustomItemBuilder({ customItems, setCustomItems, heroPoi
   const resetBuilder = () => {
     setName('');
     setBaseItem(null);
-    setExtraCost(0);
     setDescription('');
+    setSelectedEffects([]);
+    setSelectedLimitations([]);
   };
 
   return (
@@ -54,7 +88,7 @@ export default function CustomItemBuilder({ customItems, setCustomItems, heroPoi
           onChange={e => {
             const selected = items.find(i => i.name === e.target.value);
             setBaseItem(selected);
-            if (!name) setName(selected?.name + ' (Custom)');
+            if (!name && selected) setName(selected.name + ' (Custom)');
           }}
         >
           <option value="">Select base item...</option>
@@ -84,17 +118,6 @@ export default function CustomItemBuilder({ customItems, setCustomItems, heroPoi
       </label>
 
       <label className="block mb-4">
-        <span className="text-sm font-semibold">Customization Cost</span>
-        <input
-          type="number"
-          min={0}
-          value={extraCost}
-          onChange={e => setExtraCost(e.target.value)}
-          className="w-32 border p-2 rounded"
-        />
-      </label>
-
-      <label className="block mb-4">
         <span className="text-sm font-semibold">Description</span>
         <textarea
           value={description}
@@ -103,6 +126,48 @@ export default function CustomItemBuilder({ customItems, setCustomItems, heroPoi
           placeholder="Describe the custom features added"
         />
       </label>
+
+      <div className="mb-4">
+        <span className="text-sm font-semibold block mb-1">Add Effects (+3 pts each)</span>
+        <div className="grid grid-cols-2 gap-2">
+          {effects.map(opt => (
+            <label key={opt.name} className="flex items-center space-x-2 group relative">
+              <input
+                type="checkbox"
+                checked={selectedEffects.includes(opt)}
+                onChange={() => toggleOption(opt, selectedEffects, setSelectedEffects)}
+              />
+              <span>{opt.name}</span>
+              {opt.description && (
+                <div className="absolute bottom-full mb-1 left-0 hidden group-hover:block w-64 bg-black text-white text-xs p-2 rounded shadow-lg z-10">
+                  {opt.description}
+                </div>
+              )}
+            </label>
+          ))}
+        </div>
+      </div>
+
+      <div className="mb-4">
+        <span className="text-sm font-semibold block mb-1">Add Limitations (-3 pts each)</span>
+        <div className="grid grid-cols-2 gap-2">
+          {limitations.map(opt => (
+            <label key={opt.name} className="flex items-center space-x-2 group relative">
+              <input
+                type="checkbox"
+                checked={selectedLimitations.includes(opt)}
+                onChange={() => toggleOption(opt, selectedLimitations, setSelectedLimitations)}
+              />
+              <span>{opt.name}</span>
+              {opt.description && (
+                <div className="absolute bottom-full mb-1 left-0 hidden group-hover:block w-64 bg-black text-white text-xs p-2 rounded shadow-lg z-10">
+                  {opt.description}
+                </div>
+              )}
+            </label>
+          ))}
+        </div>
+      </div>
 
       <p className="mb-4"><strong>Total Cost:</strong> {totalCost()}</p>
 
@@ -129,6 +194,12 @@ export default function CustomItemBuilder({ customItems, setCustomItems, heroPoi
               <li key={i}>
                 <strong>{item.name}</strong> ({item.type}) — {item.stat}, based on <em>{item.base}</em> (Cost: {item.cost})<br />
                 <span className="text-sm text-gray-600">{item.description}</span>
+                {item.effects?.length > 0 && (
+                  <div className="text-xs text-gray-500">Effects: {item.effects.join(', ')}</div>
+                )}
+                {item.limitations?.length > 0 && (
+                  <div className="text-xs text-red-500">Limitations: {item.limitations.join(', ')}</div>
+                )}
               </li>
             ))}
           </ul>
