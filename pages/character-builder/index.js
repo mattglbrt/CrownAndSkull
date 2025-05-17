@@ -1,16 +1,16 @@
 import { useState, useEffect } from 'react';
-import Navbar from '../components/Navbar';
-import StepIntro from '../components/StepIntro';
-import StepHometown from '../components/StepHometown';
-import StepFlaws from '../components/StepFlaws';
-import StepCoreAbility from '../components/StepCoreAbility';
-import StepSkills from '../components/StepSkills';
-import StepEquipment from '../components/StepEquipment';
-import CustomItemBuilder from '../components/CustomItemBuilder';
-import StepSpells from '../components/StepSpells';
-import CustomSpellBuilder from '../components/CustomSpellBuilder';
-import StepCompanions from '../components/StepCompanions';
-import { downloadMarkdown } from '../lib/downloadMarkdown';
+import Navbar from '../../components/Navbar';
+import StepIntro from '../../components/StepIntro';
+import StepHometown from '../../components/StepHometown';
+import StepFlaws from '../../components/StepFlaws';
+import StepCoreAbility from '../../components/StepCoreAbility';
+import StepSkills from '../../components/StepSkills';
+import StepEquipment from '../../components/StepEquipment';
+import CustomItemBuilder from '../../components/CustomItemBuilder';
+import StepSpells from '../../components/StepSpells';
+import CustomSpellBuilder from '../../components/CustomSpellBuilder';
+import StepCompanions from '../../components/StepCompanions';
+import { downloadMarkdown } from '../../lib/downloadMarkdown';
 
 const STORAGE_KEY = 'crown-skull-saves';
 

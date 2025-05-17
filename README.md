@@ -52,7 +52,7 @@ Once complete, a character can be downloaded as a .md file using the "Download M
 - [ ] Campaign tracker or deed builder
 - [X] Shareable character links
 - [ ] Character Templates: Provide pre-made templates for quick character generation.
-- [ ] Enhancing Mobile Responsiveness: Optimize the interface for mobile devices.
+- [X] Enhancing Mobile Responsiveness: Optimize the interface for mobile devices.
 
 # License
 This app is for personal and fan use only. Crown & Skull is copyrighted by its original creators. This project is an unofficial utility and not affiliated with the original publisher. This uses only the free options available by downloading to free players guide at (Runehammer)[https://www.runehammer.online/crown-skull-rpg]
