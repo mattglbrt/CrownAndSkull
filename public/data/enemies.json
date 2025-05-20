@@ -1,0 +1,409 @@
+[
+  {
+    "name": "Armor Titan",
+    "type": "construct",
+    "hp": 200,
+    "atk": 2,
+    "def": 8,
+    "phases": [
+      4
+    ],
+    "traits": [
+      "living armor",
+      "seismic shockwave"
+    ],
+    "notes": "Used to guard tombs or strongholds. Stands motionless for ages.",
+    "tactics": {
+      "1": "Lunge to a new target, pinning them with Muscle 12",
+      "2": "Crushing hammer! Equipment attrition",
+      "3": "Crushing hammer! Equipment attrition",
+      "4": "Crushing hammer! Equipment attrition",
+      "5": "Crushing hammer! Equipment attrition",
+      "6": "Leap and slam hammer, creating a seismic shockwave. Evade only. Basic attrition to all near"
+    },
+    "region": "wilds",
+    "difficulty": "hard"
+  },
+  {
+    "name": "Blood Fungus",
+    "type": "fungus",
+    "hp": "20 x size",
+    "atk": 10,
+    "def": 3,
+    "phases": [
+      5
+    ],
+    "traits": [
+      "poisonous",
+      "variant forms"
+    ],
+    "notes": "Predatory mushrooms with acidic slime and spore clouds. Variant forms include Poison Slimer and Sapper Gill.",
+    "tactics": {
+      "1": "Move to a new target, leaving an acidic trail of slime",
+      "2": "Squirt toxic ooze to a far range, equipment attrition",
+      "3": "Squirt toxic ooze to a far range, equipment attrition",
+      "4": "Squirt toxic ooze to a far range, equipment attrition",
+      "5": "Squirt toxic ooze to a far range, equipment attrition",
+      "6": "Spore cloud! Engulfs all foes at arm\u2019s length. Roll Resist to avoid"
+    },
+    "region": "swamp",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Formian",
+    "type": "insectoid",
+    "hp": 25,
+    "atk": 4,
+    "def": 4,
+    "phases": [
+      1
+    ],
+    "traits": [
+      "four arms",
+      "tribal"
+    ],
+    "notes": "Ant-like beings with dual-wielded weapons. Slash two targets with tactic 6. Elders use earth magic.",
+    "tactics": {
+      "1": "Backstep and brace for attack. Ignores 1 attack afterward",
+      "2": "Twin blades slash in a cross strike! Basic attrition",
+      "3": "Twin blades slash in a cross strike! Basic attrition",
+      "4": "Twin blades slash in a cross strike! Basic attrition",
+      "5": "Twin blades slash in a cross strike! Basic attrition",
+      "6": "Split target! Attack 2 different foes for basic attrition"
+    },
+    "region": "wilds",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Flame Kin",
+    "type": "elemental",
+    "hp": 25,
+    "atk": 0,
+    "def": 1,
+    "phases": [
+      3
+    ],
+    "traits": [
+      "fire",
+      "elemental"
+    ],
+    "notes": "Small fire elementals born of flame. Vanish and reappear in fire. Burning touch causes repeat attrition.",
+    "tactics": {
+      "1": "Vanish in smoke, reappear in/near open flame or from another Flame Kin",
+      "2": "Burning Touch. Flesh attrition, repeats next round unless extinguished",
+      "3": "Burning Touch. Flesh attrition, repeats next round unless extinguished",
+      "4": "Burning Touch. Flesh attrition, repeats next round unless extinguished",
+      "5": "Burning Touch. Flesh attrition, repeats next round unless extinguished",
+      "6": "Flame Wave! Engulfs all in area. Same effect as Burning Touch to all foes"
+    },
+    "region": "wilds",
+    "difficulty": "easy"
+  },
+  {
+    "name": "Giant",
+    "type": "giant",
+    "hp": 150,
+    "atk": 3,
+    "def": 8,
+    "phases": [
+      4
+    ],
+    "traits": [
+      "brutal",
+      "destructive"
+    ],
+    "notes": "Destroy everything around them with clubs or boulders. Intelligent with their own culture.",
+    "tactics": {
+      "1": "Stomp across battlefield. All in path roll Evade or suffer basic attrition",
+      "2": "Rock club! Brutal attrition",
+      "3": "Rock club! Brutal attrition",
+      "4": "Rock club! Brutal attrition",
+      "5": "Rock club! Brutal attrition",
+      "6": "Boulder crusher! Slams rubble, sending rocks flying. All foes suffer basic attrition"
+    },
+    "region": "wilds",
+    "difficulty": "hard"
+  },
+  {
+    "name": "Dragon Elder",
+    "type": "dragon",
+    "hp": 250,
+    "atk": 10,
+    "def": 10,
+    "phases": [
+      3
+    ],
+    "traits": [
+      "ancient",
+      "magic",
+      "fire"
+    ],
+    "notes": "Immense dragons nearly immortal, capable of devastating terrain and casting powerful spells. Tail swipe inflicts brutal attrition.",
+    "tactics": {
+      "1": "Galloping flight. If on land, foes in the way roll Evade or suffer basic attrition",
+      "2": "Fire and Magic. Roll for arcane or fiery attack",
+      "3": "Fire and Magic. Roll for arcane or fiery attack",
+      "4": "Fire and Magic. Roll for arcane or fiery attack",
+      "5": "Fire and Magic. Roll for arcane or fiery attack",
+      "6": "Tail Swipe! Sweeps the scene. With Evade: 1 basic attrition. Else: 1 basic + 1 brutal"
+    },
+    "region": "wilds",
+    "difficulty": "hard"
+  },
+  {
+    "name": "Frog-Kin",
+    "type": "humanoid",
+    "hp": 60,
+    "atk": 6,
+    "def": 6,
+    "phases": [
+      3
+    ],
+    "traits": [
+      "martial arts",
+      "tongue lash",
+      "imperial"
+    ],
+    "notes": "Master fighters from the frog empire. Can disarm, hit multiple foes, and strike without cover. Tactic 6 uses tongue or martial arts.",
+    "tactics": {
+      "1": "Leap! Move nearby, even over foes",
+      "2": "Weapon attack. Basic attrition",
+      "3": "Weapon attack. Basic attrition",
+      "4": "Weapon attack. Basic attrition",
+      "5": "Weapon attack. Basic attrition",
+      "6": "Tongue Lash or martial arts. Roll Evade or lose 1 item"
+    },
+    "region": "wilds",
+    "difficulty": "hard"
+  },
+  {
+    "name": "Yeti Folk",
+    "type": "giant",
+    "hp": 125,
+    "atk": 3,
+    "def": 5,
+    "phases": [
+      4
+    ],
+    "traits": [
+      "snowy",
+      "brutal",
+      "rage-prone"
+    ],
+    "notes": "Ape-like giants that live in high tundra. Easily enraged. Slam fists or throw snow boulders for massive destruction.",
+    "tactics": {
+      "1": "Change targets. 'Rage drives these creatures!'",
+      "2": "Slamming fists. 2 heavy attacks. Defense fail = destroy attrition. Evade avoids 1 fist",
+      "3": "Slamming fists. 2 heavy attacks. Defense fail = destroy attrition. Evade avoids 1 fist",
+      "4": "Slamming fists. 2 heavy attacks. Defense fail = destroy attrition. Evade avoids 1 fist",
+      "5": "Slamming fists. 2 heavy attacks. Defense fail = destroy attrition. Evade avoids 1 fist",
+      "6": "Giant snowball! Changes terrain. Brutal attrition. Stun 1 round if hit"
+    },
+    "region": "wilds",
+    "difficulty": "hard"
+  },
+  {
+    "name": "Dire Wizard",
+    "type": "undead",
+    "hp": 50,
+    "atk": 3,
+    "def": 3,
+    "phases": [
+      1
+    ],
+    "traits": [
+      "spellcasting",
+      "lich",
+      "arcane"
+    ],
+    "notes": "Powerful undead wizards or liches with area and targeted spells. Recovers spells or HP each round.",
+    "tactics": {
+      "1": "The enemy displaces, moves, or repositions",
+      "2": "The enemy uses its primary single-target attack",
+      "3": "The enemy uses its primary single-target attack",
+      "4": "The enemy uses its primary single-target attack",
+      "5": "The enemy uses its primary single-target attack",
+      "6": "The enemy uses an area attack that hits many targets"
+    },
+    "region": "undead",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Goblin",
+    "type": "humanoid",
+    "hp": 25,
+    "atk": 5,
+    "def": 1,
+    "phases": [
+      2,
+      4
+    ],
+    "traits": [
+      "chaotic",
+      "destructive",
+      "improviser"
+    ],
+    "notes": "Small green-skinned fiends who love traps and fire. Not particularly smart, but dangerous in groups.",
+    "tactics": {
+      "1": "Run & hide. Goblins vanish or switch to bow and arrow",
+      "2": "A ragged little sword. Basic attrition",
+      "3": "A ragged little sword. Basic attrition",
+      "4": "A ragged little sword. Basic attrition",
+      "5": "A ragged little sword. Basic attrition",
+      "6": "Rickety gadgets! All foes hit with basic attrition, -3 ATK"
+    },
+    "region": "wilds",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Knight",
+    "type": "humanoid",
+    "hp": 50,
+    "atk": 3,
+    "def": 7,
+    "phases": [
+      2
+    ],
+    "traits": [
+      "armored",
+      "elite",
+      "discipline"
+    ],
+    "notes": "Highly trained warrior in plate armor. Can deliver combined equipment and flesh attrition. Uses shields tactically.",
+    "tactics": {
+      "1": "None listed. Assume reposition or raise shield",
+      "2": "Dual weapon attack. Flesh and equipment attrition",
+      "3": "Dual weapon attack. Flesh and equipment attrition",
+      "4": "Dual weapon attack. Flesh and equipment attrition",
+      "5": "Dual weapon attack. Flesh and equipment attrition",
+      "6": "Rushing charge! Evade only. Brutal attrition + stun"
+    },
+    "region": "wilds",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Conjured Dead",
+    "type": "undead",
+    "hp": 30,
+    "atk": null,
+    "def": 3,
+    "phases": [
+      4
+    ],
+    "traits": [
+      "incorporeal"
+    ],
+    "notes": "Ghosts or phantasms summoned by necromancy. Can only be harmed by magic weapons.",
+    "tactics": {
+      "1": "Float through walls and doors, appearing elsewhere",
+      "2": "Touch of Death: Freezing necrosis, use Evade or suffer flesh attrition. Cannot avoid with Defense",
+      "3": "Touch of Death: Freezing necrosis, use Evade or suffer flesh attrition. Cannot avoid with Defense",
+      "4": "Touch of Death: Freezing necrosis, use Evade or suffer flesh attrition. Cannot avoid with Defense",
+      "5": "Touch of Death: Freezing necrosis, use Evade or suffer flesh attrition. Cannot avoid with Defense",
+      "6": "Deathly scream! All those who hear this howl roll Resist or flee in terror"
+    },
+    "region": "undead",
+    "difficulty": "easy"
+  },
+  {
+    "name": "Cryptopede",
+    "type": "insectoid",
+    "hp": 50,
+    "atk": 2,
+    "def": 3,
+    "phases": [
+      1,
+      4
+    ],
+    "traits": [
+      "camouflage",
+      "regeneration"
+    ],
+    "notes": "Carnivorous centipede that mimics shapes to ambush prey.",
+    "tactics": {
+      "1": "Scurry onto out-of-reach-surfaces, hide, regenerate D10 HP",
+      "2": "Pincer Bite! Basic attrition, second hit if ambushing",
+      "3": "Pincer Bite! Basic attrition, second hit if ambushing",
+      "4": "Pincer Bite! Basic attrition, second hit if ambushing",
+      "5": "Pincer Bite! Basic attrition, second hit if ambushing",
+      "6": "Whirling tail barb hits all near foes with basic attrition"
+    },
+    "region": "wilds",
+    "difficulty": "medium"
+  },
+  {
+    "name": "Frost Lizard",
+    "type": "reptile",
+    "hp": 20,
+    "atk": 2,
+    "def": 1,
+    "phases": [
+      3
+    ],
+    "traits": [
+      "cold aura",
+      "ambush"
+    ],
+    "notes": "Icy-blooded reptiles that protect their eggs with freezing mist.",
+    "tactics": {
+      "1": "Whips tail and hurries to nearest snow or ice, recovering 10 HP",
+      "2": "Freeze and shatter! Attacks cause equipment attrition",
+      "3": "Freeze and shatter! Attacks cause equipment attrition",
+      "4": "Freeze and shatter! Attacks cause equipment attrition",
+      "5": "Freeze and shatter! Attacks cause equipment attrition",
+      "6": "Deep freeze mist chills bones and freezes gear. Equipment attrition"
+    },
+    "region": "wilds",
+    "difficulty": "easy"
+  },
+  {
+    "name": "Spiderkin",
+    "type": "arachnid",
+    "hp": 25,
+    "atk": 1,
+    "def": 1,
+    "phases": [
+      4
+    ],
+    "traits": [
+      "poison",
+      "webs"
+    ],
+    "notes": "Mutant spider horrors. Use 1d10 multiplier on stats to scale individual.",
+    "tactics": {
+      "1": "Skitters aside or climbs, leaves sticky web strand",
+      "2": "Fang bite! Basic attrition",
+      "3": "Fang bite! Basic attrition",
+      "4": "Fang bite! Basic attrition",
+      "5": "Fang bite! Basic attrition",
+      "6": "Stinger pierces target with poison. Paralyze next round (1d4)"
+    },
+    "region": "wilds",
+    "difficulty": "easy"
+  },
+  {
+    "name": "Skeleton",
+    "type": "undead",
+    "hp": 10,
+    "atk": 3,
+    "def": 3,
+    "phases": [
+      3
+    ],
+    "traits": [
+      "armed",
+      "undead"
+    ],
+    "notes": "Reanimated bones of warriors. Beware variants like the Skeleton Commander.",
+    "tactics": {
+      "1": "Stumble and seek new target",
+      "2": "Rusty weapon strike. Basic attrition",
+      "3": "Rusty weapon strike. Basic attrition",
+      "4": "Rusty weapon strike. Basic attrition",
+      "5": "Rusty weapon strike. Basic attrition",
+      "6": "Cleave attack! Hits up to 3 foes with basic attrition"
+    },
+    "region": "undead",
+    "difficulty": "easy"
+  }
+]
